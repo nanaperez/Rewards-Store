@@ -1,0 +1,2 @@
+(this["webpackJsonpstore-perez-maria-alejandra"]=this["webpackJsonpstore-perez-maria-alejandra"]||[]).push([[0],{10:function(e,r,a){"use strict";a.r(r);var n=a(0),t=a.n(n),c=a(3),s=a.n(c),o=(a(8),a(1));var i=function(){return Object(o.jsx)("div",{className:"App",children:"Hola Mundo!"})};s.a.render(Object(o.jsx)(t.a.StrictMode,{children:Object(o.jsx)(i,{})}),document.getElementById("root"))},8:function(e,r,a){}},[[10,1,2]]]);
+//# sourceMappingURL=main.1426faba.chunk.js.map
