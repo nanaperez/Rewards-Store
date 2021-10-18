@@ -2,7 +2,7 @@ import React from 'react'
 import { HomePage } from '../components/home/HomePage';
 import { Navbar } from '../components/home/Navbar';
 import { Redeem } from '../components/history/Redeem';
-import { MoreCoins } from '../components/moreCoins/MoreCoins';
+import { MoreCoins } from '../components/coins/MoreCoins';
 import {
     BrowserRouter as Router,
     Switch,

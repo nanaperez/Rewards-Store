@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FilterCategory } from '../../helpers/FilterCategory'
-import { ButtonsNextPreious } from './ButtonsNextPreious'
+import { ButtonsNextPrev } from './ButtonsNextPrev'
 import { ContextValues } from '../context/Context'
-import cel from '../../assets/icons/smartphone.svg'
-import tel from '../../assets/icons/television.svg'
-import game from '../../assets/icons/game-controller.svg'
+// import cel from '../../assets/icons/smartphone.svg'
+// import tel from '../../assets/icons/television.svg'
+// import game from '../../assets/icons/game-controller.svg'
 
 export const Filters = () => {
 
-    const {list, setList, setLoading, indexOfLast, filterPriceLowers, filterPriceHigh} = useContext(ContextValues)
+    const {list, setList, setLoading, indexOfLast, filterPriceLow, filterPriceHigh} = useContext(ContextValues)
 
     const [category, setCategory] = useState(undefined)
     const [all, setAll] = useState([])
@@ -51,7 +51,7 @@ export const Filters = () => {
                 <p className="ff-source-sans-pro sort-by">Sort by:</p>
                 <div className="btn background-15dbff " onClick={handleClick}> <p className="ff-source-sans-pro cat">{(selectItem === "All") ?"Category" :selectItem}</p><i className={(selectList)?"fas fa-chevron-down arrow" :"fas fa-chevron-left arrow"}></i>
                     <ul className={(selectList) ?"listStyle" :"display-none"}>
-                        <li name="hola">
+                        <li>
                             <option value="All" onClick={clickValue}>All </option>
                             <option value="All" className="fa margin-right-3" onClick={clickValue}> &#xf84c; </option>
                         </li>
@@ -75,17 +75,15 @@ export const Filters = () => {
                             <option value="Audio" onClick={clickValue}>Audio </option>
                             <option value="Audio" className="fa margin-right-3" onClick={clickValue}> &#xf58f; </option>
                         </li>
-                        
                     </ul>
-                    
                 </div>
-                <button className="btn background-d8d7d7" onClick={filterPriceLowers}>Lowest Price</button>
+                <button className="btn background-d8d7d7" onClick={filterPriceLow}>Lowest Price</button>
                 <button className="btn background-d8d7d7" onClick={filterPriceHigh}>Highest Price</button>
-                <img className="cel" src={cel} alt="cel"/>
+                {/* <img className="cel" src={cel} alt="cel"/>
                 <img className="tel" src={tel} alt="television"/>
-                <img className="game" src={game} alt="game"/>
+                <img className="game" src={game} alt="game"/> */}
             </div>
-            <ButtonsNextPreious/>          
+            <ButtonsNextPrev />          
         </div>
     )
 }

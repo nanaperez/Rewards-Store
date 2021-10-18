@@ -4,6 +4,7 @@ import { Filters } from './Filters'
 import { CardGrid } from './CardGrid'
 
 export const HomePage = () => {
+    
     return (
         <>
             <div className="container">

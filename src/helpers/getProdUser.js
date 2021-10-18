@@ -6,7 +6,7 @@ const headers = {
     Authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRmNDg3NzgxMTJhNTAwMjFlMjcwNjEiLCJpYXQiOjE2MzI1ODU4NDd9.1wF1EJDGshVWWJqPmlkuFnW5LPavKhLSozhl2mkPZUE"
 }
 
-export const getProductsOrUser = async(key) => {
+export const getProdUser = async(key) => {
     try {
         if(key === "user"){
             const resp = await fetch(`${baseUrl}/${key}/me`, {headers});
@@ -24,33 +24,31 @@ export const getProductsOrUser = async(key) => {
             return data
         }
     } catch (error) {
-        Swal.fire("something went wrong", "try again in a few minutes", "error")
+        Swal.fire("Something went wrong!", "Try again in a few minutes", "error")
     }
 }
 
 export const postPoints = async(points) => {
-    
     try {
         await fetch(`${baseUrl}/user/points`,{
             method: 'POST',
-            body: JSON.stringify({amount: points}),
+            body: JSON.stringify({amount:points}),
             headers: headers
         })
-        getProductsOrUser("user")
+        getProdUser("user")
     } catch (error) {
-        Swal.fire("something went wrong", "try again in a few minutes", "error")
+        Swal.fire("Something went wrong!", "Try again in a few minutes", "error")
     }
-    
 }
 
 export const postProduct = async(id) => {
     try {
         await fetch(`${baseUrl}/redeem`,{
             method: 'POST',
-            body: JSON.stringify({productId: id}),
+            body: JSON.stringify({productId:id}),
             headers: headers
         })
     } catch (error) {
-        Swal.fire("something went wrong", "try again in a few minutes", "error")
+        Swal.fire("Something went wrong!", "Try again in a few minutes", "error")
     }
 } 

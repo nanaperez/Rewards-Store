@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FilterPriceHighest, FilterPriceLower } from "../helpers/FilterPrice";
 import { getProdUser } from "../helpers/getProdUser";
 
-export const paginator = () => {
+export const usePagination = () => {
     
     const [list, setList] = useState([]); 
     const [currentPage, setCurrentPage] = useState(1);
