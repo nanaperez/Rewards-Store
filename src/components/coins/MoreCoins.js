@@ -19,8 +19,8 @@ export const MoreCoins = () => {
     const handleClick = () => {
         Swal.fire({
             imageUrl: `${rules}`,
-            imageWidth: 400,
-            imageHeight: 100,
+            imageWidth: 200,
+            imageHeight: 200,
             imageAlt: 'Custom image',
             text: 'Only 2 chests have coins, 1000, 5000 or 7500, you have only 2 opportunities, good luck!',
             showClass: {
@@ -33,28 +33,25 @@ export const MoreCoins = () => {
     }
 
     return (
-        <>
+      <>
         <div className="more-coins-div">
-          <h1 className="more-coins-title">Welcome to <span className="color-f1d87d">More Coins</span></h1>  
-          <div className="user-coins">
-                <p className="more-coins-userInfo"><span className="color-266894">{name}</span> you have {points} coins </p>
-          </div>
-          <div className="game-roules-start">
-            <h2 className="game-title">Lets go to play <span className="color-f1d87d">More Coins!</span></h2>
-            <button 
-                className="btn background-15dbff color-white margin-top-10"
-                onClick={handleClick}
-                > 
-                Rules <i className="fas fa-scroll rules" />
+          <div className="align-center">
+            <h1 className="history-title">Welcome to the game! <span className="color-f1d87d">Add more coins here!</span></h1>
+            <button className="btn background-blue color-white" onClick={handleClick}>
+              Rules
             </button>
-            <button className="btn-start" onClick={handleStart}><img src={(!startGame) ?buttonStart :buttonGreen}  alt="start" /></button>
+          </div>
+          <div className="user-coins">
+                <p className="more-coins-userInfo"><span>{name}</span> you have <b>{points} coins </b></p>
+          </div>
+          <div className="game-rule-start">
+            <h2 className="game-title">Lets go to <button className="btn-start" onClick={handleStart}><img src={(!startGame) ?buttonStart :buttonGreen}  alt="start" /></button> <span className="color-f1d87d">More Coins!</span></h2>
           </div>
           {
-              (startGame)
-                    &&<ChestGame  setStartGame={setStartGame}/>
+            (startGame)
+              &&<ChestGame  setStartGame={setStartGame}/>
           }
-        
         </div>
-        </>
+      </>
     )
 }

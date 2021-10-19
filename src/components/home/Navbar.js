@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { getProdUser } from '../../helpers/getProdUser'
 import { ContextValues } from '../context/Context'
 import { MenuItems } from './MenuItems'
+import coin from '../../assets/icons/coin.svg'
 
 export const Navbar = () => {
 
@@ -48,8 +49,9 @@ export const Navbar = () => {
                 <i className="fas fa-user"></i>
                 <p className="name-user">{name}</p>
                 <div className="coins">
-                    <p>{points}</p>
-                    <i className="fas fa-coins"></i>
+                    <p>{points}&nbsp;&nbsp;</p>
+                    <img src={coin} alt="coin" />
+                    {/* <i className="fas fa-coins"></i> */}
                 </div>
             </div>
         </div>

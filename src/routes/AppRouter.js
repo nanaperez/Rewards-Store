@@ -10,8 +10,7 @@ import {
     Redirect
   } from "react-router-dom";
 
-export const AppRouter = () => {
-    
+export const AppRouter = () => {  
     return (
         <>
             <Router>

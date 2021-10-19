@@ -8,7 +8,7 @@ export const PageControl = () => {
 
     return (     
         <div className="page-control">
-            <p>Page # {(list.length > 16)?currentPage :1}</p>
+            <p className="font-ppal">Page # {(list.length > 16)?currentPage :1}</p>
             <ButtonsNextPrev /> 
         </div>
     )

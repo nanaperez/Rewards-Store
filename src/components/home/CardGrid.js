@@ -18,12 +18,12 @@ export const CardGrid = () => {
                             ?currentList.map( product => (
                                 <CardProduct key={product._id} {...product} loadingMouse={loadingMouse} setLoadingMouse= {setLoadingMouse}/>
                             ))
-                            :<img className="loading" src={spinner} alt="loading"/>
+                            : <img className="loading" src={spinner} alt="loading"/>
                         : (list.length !== 0 && !loading)
                             ?list.map( product => (
                                 <CardProduct key={product._id} {...product} loadingMouse={loadingMouse} setLoadingMouse={setLoadingMouse}/>
                             ))
-                        :<img className="loading" src={spinner} alt="loading"/>   
+                        : <img className="loading" src={spinner} alt="loading"/>   
                 }     
             </div>
         <PageControl />

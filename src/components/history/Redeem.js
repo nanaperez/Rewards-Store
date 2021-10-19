@@ -16,14 +16,14 @@ export const Redeem = () => {
     
     return (
         <>
-            <h1 className="history-title"><span className="color-266894">{name}</span> welcome to your purchase history!!</h1>
+            <h1 className="history-title"><span className="color-blue">{name}</span> welcome to your purchase history!!</h1>
             <div className="history-table">
                 <div className="table">
-                    <div className="table-item"><h2>Date</h2><i className="fas fa-calendar-alt color-15dbff"></i></div>
-                    <div className="table-item"><h2>Category</h2><i className="fas fa-clipboard-list color-266894"></i></div> 
-                    <div className="table-item"><h2>Name</h2><i className="fas fa-file-signature color-5c2da0"></i></div>
-                    <div className="table-item"><h2>Price</h2><i className="fas fa-coins color-f1d87d"></i></div>
-                    <div className="table-item"><h2>Image</h2><i className="far fa-file-image color-darkgrey"></i></div>
+                    <div className="table-item"><h2>Date</h2></div>
+                    <div className="table-item"><h2>Category</h2></div> 
+                    <div className="table-item"><h2>Name</h2></div>
+                    <div className="table-item"><h2>Price</h2></div>
+                    <div className="table-item"><h2>Image</h2></div>
                 </div>
                 {
                     (history.length > 0)
